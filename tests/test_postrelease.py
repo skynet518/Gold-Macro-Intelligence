@@ -78,3 +78,17 @@ class AnalyzeInputTests(unittest.TestCase):
         result = self.invoke(ROOT / 'examples/analysis.json')
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(json.loads(result.stdout), json.loads((ROOT / 'examples/analysis.expected.json').read_text()))
+
+class VersionConsistencyTests(unittest.TestCase):
+    def test_release_version_metadata_and_cli(self):
+        import gmi
+        expected = '1.0.1'
+        project = (ROOT / 'pyproject.toml').read_text(encoding='utf-8')
+        skill = (SKILL / 'SKILL.md').read_text(encoding='utf-8')
+        fixture = json.loads((ROOT / 'fixtures/gmi_portability_expected.json').read_text(encoding='utf-8'))
+        self.assertEqual(gmi.__version__, expected)
+        self.assertRegex(project, r'(?m)^version = "' + re.escape(expected) + r'"$')
+        self.assertRegex(skill, r'(?m)^  version: "' + re.escape(expected) + r'"$')
+        self.assertEqual(fixture['gmi_version'], expected)
+        result = subprocess.run([sys.executable, '-m', 'gmi', 'env-check'], cwd=ROOT, text=True, capture_output=True, check=True)
+        self.assertEqual(json.loads(result.stdout)['gmi_version'], expected)

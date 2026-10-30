@@ -6,7 +6,7 @@ description: >-
   timing and unvalidated risk checks. 黄金历史回撤、美债实际利率、CFTC持仓与央行储备的可复现研究；不执行交易。
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   compatibility: >-
     Requires Python 3.10+ and access to the accompanying gmi package; live data
     are not bundled. 需要 Python 3.10+ 及配套 gmi 包，未内置全部实时数据。

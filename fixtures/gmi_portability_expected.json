@@ -1,6 +1,6 @@
 {
   "contract_version": "1",
-  "gmi_version": "1.0.0",
+  "gmi_version": "1.0.1",
   "fixture_content_sha256": "8acf97d39e691b0b0383d0a3f455f730987d275839f7cb5607a00ff6393aa5ba",
   "data_class": "SYNTHETIC",
   "analysis": {

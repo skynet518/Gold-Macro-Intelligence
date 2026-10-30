@@ -6,6 +6,24 @@ The versions below describe engineering milestones. **They are not evidence of p
 
 以下各版本代表工程迭代，不代表策略已获得实盘有效性验证。历史源码全量 ZIP 作为私有资产保存，不默认进入公开 Git 仓库。
 
+## v1.0.1 — Patch release
+
+### Fixed
+
+- Resolved broken documentation links when the Agent Skill is installed independently.
+- Improved CLI error messages for invalid analysis inputs.
+
+### Documentation
+
+- Clarified the separate installation requirements for the Agent Skill and Python engine.
+- Documented research and model-signal status fields across CLI commands.
+- Clarified offline source execution and Python package build dependencies.
+
+### Validation
+
+- Added regression coverage for standalone Skill documentation portability and invalid input handling.
+- Preserved existing research calculations and model-signal safety restrictions.
+
 ## v1.0.0 — Initial public research release / 首个公开研究版本
 
 - English and Simplified Chinese documentation in one repository / 单仓库中英文双语文档。
