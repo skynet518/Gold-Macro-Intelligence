@@ -25,6 +25,20 @@ GMI 希望把这些线索变成有出处、能重算的研究结果。它目前�
 
 **环境：** Python 3.10 及以上。从源码目录直接运行只依赖 Python 标准库；打包或安装可能需要 `setuptools`。
 
+
+### 安装 Python 引擎与 Skill
+
+Python 3.10+。从仓库根目录在 macOS / Linux 使用隔离环境：
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install .
+.venv/bin/python -m gmi env-check
+.venv/bin/python -m gmi analyze examples/analysis.json
+```
+
+Windows 请使用 `.venv\Scripts\python.exe` 替代 `.venv/bin/python`。Skill 与 Python 引擎是两个独立组件：仅安装 Skill 不会安装 Python 包；宿主决定 Skill 安装位置，Agent 必须使用已安装 GMI 的解释器，并获得文件与终端访问授权。满足 Python 条件时也可在源码根目录直接运行 `python3 -m gmi`。完全离线环境可能缺少 pip 构建依赖；`pip install .` 可能需要获取 `setuptools>=68`。GMI 不自动下载、安装或配置 Agent 宿主。状态字段的精确定义见[状态契约](docs/STATUS.zh-CN.md)。
+
 ```bash
 python3 -m unittest discover -s tests -v
 python3 -m gmi analyze examples/analysis.json

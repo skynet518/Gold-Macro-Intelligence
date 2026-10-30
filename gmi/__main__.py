@@ -90,7 +90,12 @@ def main():
         else:
             data=json.loads(Path(a.input).read_text(encoding='utf-8'))
             if a.command in ('drawdowns','backtest'): validate_price_contract(data)
-            if a.command=='analyze': result=report(data)
+            if a.command=='analyze':
+                if not isinstance(data, dict):
+                    raise ValueError('invalid analyze input: expected an analysis JSON object such as examples/analysis.json')
+                if 'as_of' not in data:
+                    raise ValueError("invalid analyze input: missing required field 'as_of'; expected an analysis JSON document such as examples/analysis.json")
+                result=report(data)
             elif a.command=='backtest': result=backtest(data)
             else:
                 events=drawdowns(data['prices'],a.threshold); result={'threshold':a.threshold,'episodes':events,'survival':survival(events),'conditional_from_first_crossing':conditional_drawdowns(data['prices'],a.threshold),'units':'calendar days','note':'Retrospective threshold selection; survival starts at peak, including time before threshold crossing. Research use only.'}

@@ -6,6 +6,20 @@
 
 From the repository root, with Python 3.10+:
 
+
+### Install the Python engine and Skill
+
+Python 3.10+ is required. From the repository root on macOS / Linux, use an isolated environment:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install .
+.venv/bin/python -m gmi env-check
+.venv/bin/python -m gmi analyze examples/analysis.json
+```
+
+On Windows use `.venv\Scripts\python.exe` instead of `.venv/bin/python`. The Skill and Python engine are separate components: installing the Skill alone does not install the Python package. The host determines its Skill location; the Agent must use the interpreter with GMI installed and have authorized file and terminal access. With the required Python version, `python3 -m gmi` can also run directly from the source root. A fully offline environment may lack pip build dependencies; `pip install .` may need to fetch `setuptools>=68`. GMI does not automatically download, install or configure Agent hosts. See the [status contract](STATUS.md).
+
 ```bash
 python3 -m gmi env-check --skill gold-macro-intelligence/SKILL.md
 python3 -m gmi analyze examples/analysis.json

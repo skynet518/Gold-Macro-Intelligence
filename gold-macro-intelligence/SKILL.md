@@ -24,7 +24,7 @@ Use this Skill when a user needs an auditable study of gold drawdowns, Treasury 
 
 1. Identify the instrument, price type, currency, frequency, decision time and intended historical/research-only use. Do not mix spot, fixing and futures prices without a documented method. / 明确标的、价格口径、币种、频率及分析时点；不得混用现货、定盘价和期货。
 2. Read the supplied data contract and check units, instrument/series identity, official source, vintage, observation/publication/retrieval times and whether historical evidence was actually available at the decision time. / 核对单位、序列身份、来源、修订及数据真正可得时间。
-3. From the project root, run the appropriate engine command, for example `python3 -m gmi analyze INPUT.json`, `python3 -m gmi drawdowns PRICES.json`, `python3 -m gmi update-report ...`, `python3 -m gmi factor-research ...`, or `python3 -m gmi walk-forward INPUT.json`. Do not improvise missing CLI flags; consult `README.md` and `docs/USAGE.md`. / 按真实 CLI 运行并读取 JSON，缺参数时查文档，不自行猜命令。
+3. From the project root, run the appropriate engine command, for example `python3 -m gmi analyze INPUT.json`, `python3 -m gmi drawdowns PRICES.json`, `python3 -m gmi update-report ...`, `python3 -m gmi factor-research ...`, or `python3 -m gmi walk-forward INPUT.json`. Do not improvise missing CLI flags; consult the bundled references below. / 按真实 CLI 运行并读取 JSON，缺参数时查文档，不自行猜命令。
 4. If data are absent, stale or unauditable, output explicit limitations. Never replace missing official-country observations with zero or turn a CFTC page *Updated* date into a first-release timestamp. A holdings change is not automatically a central-bank purchase or ETF dollar flow. / 缺失、过期或不能审计的数据必须明确说明；储备吨数变化不直接等于购金，网页更新日不等于历史首发时间。
 5. Distinguish retrospective gold episodes, first threshold crossings and right-censored recovery; monthly averages are not executable daily fills. Historical snapshots and downloaded annual archives do not by themselves prove point-in-time backtest eligibility. / 事后峰谷与实时阈值触发分开，未回补事件按右删失，月均价格不冒充成交价。
 6. Report sourced facts, calculations, missing modules, risk constraints and limitations. Separate a manually supplied hypothesis from any model signal and separate portfolio risk actions from market direction. Do not promote the model beyond `NO_GO / NO_VALIDATED_SIGNAL` without qualified independent evidence. / 区分人工观点、市场结论和仓位风控；未通过验证不得给出正式模型交易指令。
@@ -37,8 +37,10 @@ Read-only; no broker access, orders, portfolio mutation or invented trading perf
 
 ## References / 参考
 
-- [English README](../README.md) / [中文 README](../README.zh-CN.md)
-- [Usage](../docs/USAGE.md) / [使用指南](../docs/USAGE.zh-CN.md)
-- [Methodology](../docs/METHODOLOGY.md) / [研究方法](../docs/METHODOLOGY.zh-CN.md)
-- [Data sources](../docs/DATA_SOURCES.md) / [数据源](../docs/DATA_SOURCES.zh-CN.md)
-- [Limitations](../docs/LIMITATIONS.md) / [限制](../docs/LIMITATIONS.zh-CN.md)
+- [English README](references/README.md) / [中文 README](references/README.zh-CN.md)
+- [Usage](references/docs/USAGE.md) / [使用指南](references/docs/USAGE.zh-CN.md)
+- [Methodology](references/docs/METHODOLOGY.md) / [研究方法](references/docs/METHODOLOGY.zh-CN.md)
+- [Data sources](references/docs/DATA_SOURCES.md) / [数据源](references/docs/DATA_SOURCES.zh-CN.md)
+- [Limitations](references/docs/LIMITATIONS.md) / [限制](references/docs/LIMITATIONS.zh-CN.md)
+
+- [Status contract](references/docs/STATUS.md) / [状态契约](references/docs/STATUS.zh-CN.md)
