@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / 'gold-macro-intelligence'
 SOURCES = ['README.md', 'README.zh-CN.md'] + [f'docs/{name}{lang}.md' for name in ('USAGE', 'METHODOLOGY', 'DATA_SOURCES', 'LIMITATIONS', 'STATUS') for lang in ('', '.zh-CN')]
 LINK = re.compile(r'(?<!!)\[[^\]]*\]\(([^)]+)\)')
-PUBLIC = 'https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/'
+PUBLIC = 'https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/'
 
 
 def reference_text(name):
@@ -24,6 +24,8 @@ def reference_text(name):
             return match.group(0)
         resolved = (source.parent / unquote(path)).resolve()
         relative = resolved.relative_to(ROOT).as_posix()
+        if relative == 'gold-macro-intelligence/SKILL.md':
+            return match.group(0).replace(target, '../SKILL.md')
         if relative in SOURCES:
             return match.group(0)
         return match.group(0).replace(target, PUBLIC + relative + (('#' + urlsplit(target).fragment) if urlsplit(target).fragment else ''))
@@ -35,6 +37,20 @@ class SkillPortabilityTests(unittest.TestCase):
         for name in SOURCES:
             with self.subTest(name=name):
                 self.assertEqual((SKILL / 'references' / name).read_text(encoding='utf-8'), reference_text(name))
+
+    def test_current_version_links(self):
+        import gmi
+        self.assertEqual(PUBLIC, f'https://github.com/skynet518/Gold-Macro-Intelligence/blob/v{gmi.__version__}/')
+        for name in ('README.md', 'README.zh-CN.md'):
+            content = (SKILL / 'references' / name).read_text(encoding='utf-8')
+            self.assertIn('[Agent Skill](../SKILL.md)', content)
+        for document in (SKILL / 'references').rglob('*.md'):
+            for target in LINK.findall(document.read_text(encoding='utf-8')):
+                with self.subTest(document=document, target=target):
+                    self.assertNotIn('github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/', target)
+                    if target.startswith(PUBLIC):
+                        relative = urlsplit(target[len(PUBLIC):]).path
+                        self.assertTrue((ROOT / unquote(relative)).is_file(), target)
 
     def test_isolated_skill_links(self):
         with tempfile.TemporaryDirectory() as tmp:

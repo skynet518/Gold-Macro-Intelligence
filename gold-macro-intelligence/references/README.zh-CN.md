@@ -2,7 +2,7 @@
 
 [English](README.md) · **简体中文**
 
-GMI 是一套只读、可复现的黄金研究工具，由 [Agent Skill](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/gold-macro-intelligence/SKILL.md) 与确定性的 Python 命令行引擎组成。它把黄金价格、美国国债利率、期货资金结构和实物配置需求放在同一个分析框架中，而不是让语言模型凭盘面临时生成判断。
+GMI 是一套只读、可复现的黄金研究工具，由 [Agent Skill](../SKILL.md) 与确定性的 Python 命令行引擎组成。它把黄金价格、美国国债利率、期货资金结构和实物配置需求放在同一个分析框架中，而不是让语言模型凭盘面临时生成判断。
 
 项目起点是几个实际交易中经常碰到的问题：**黄金经历一次大跌，到底跌了多久？回到前高用了多久？同期美国国债收益率和实际利率怎么变？哪些资金在离场，哪些资金仍在增持？** 只看 K 线，往往无法区分实际利率上升、美元流动性紧张、期货杠杆出清或中长期配置需求变化。
 
@@ -84,8 +84,8 @@ GMI 将证据划分为六部分：
 
 ## 开源与参与
 
-项目原创代码及文档采用 [MIT License](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/LICENSE)，**不代表任何第三方数据获得了相同的再分发许可**。FRED、CFTC、世界黄金协会、世界银行及各国央行数据的使用和公开分发，应以各自条款为准。
+项目原创代码及文档采用 [MIT License](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/LICENSE)，**不代表任何第三方数据获得了相同的再分发许可**。FRED、CFTC、世界黄金协会、世界银行及各国央行数据的使用和公开分发，应以各自条款为准。
 
-欢迎提供能够重现的缺陷案例、发布时间证据、指标口径校正与文档改进。参见[贡献指南](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/CONTRIBUTING.zh-CN.md)、[安全说明](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/SECURITY.zh-CN.md)与[版本记录](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/CHANGELOG.md)。
+欢迎提供能够重现的缺陷案例、发布时间证据、指标口径校正与文档改进。参见[贡献指南](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/CONTRIBUTING.zh-CN.md)、[安全说明](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/SECURITY.zh-CN.md)与[版本记录](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/CHANGELOG.md)。
 
 如果一条研究结论无法找到数据依据，或者无法确定历史上何时可以知道这条信息，就应如实标明限制，而不是强行得出交易指令。

@@ -2,7 +2,7 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-Gold Macro Intelligence is a small, read-only research toolkit for studying gold through prices, interest rates, positioning and physical demand. It combines an [Agent Skill](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/gold-macro-intelligence/SKILL.md) with a deterministic Python command-line engine, so the calculations can be inspected and run without depending on a particular language model.
+Gold Macro Intelligence is a small, read-only research toolkit for studying gold through prices, interest rates, positioning and physical demand. It combines an [Agent Skill](../SKILL.md) with a deterministic Python command-line engine, so the calculations can be inspected and run without depending on a particular language model.
 
 The original question was straightforward: **when gold suffers a large drawdown, how long does it take to fall, how long does it take to regain the old high, and what changed in the Treasury market and among the people holding gold?** A chart alone does not explain whether a selloff comes from higher real yields, a scramble for dollars, leveraged funds reducing exposure, or slower-moving allocation decisions.
 
@@ -84,8 +84,8 @@ Gold traders reviewing past selloffs; macro and commodity researchers comparing 
 
 ## Contributing and license
 
-The source code and original documentation are distributed under the [MIT License](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/LICENSE). This does **not** grant permission to redistribute data obtained from FRED, CFTC, the World Gold Council, the World Bank or other third parties. Review each provider's terms before publishing datasets or derived extracts.
+The source code and original documentation are distributed under the [MIT License](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/LICENSE). This does **not** grant permission to redistribute data obtained from FRED, CFTC, the World Gold Council, the World Bank or other third parties. Review each provider's terms before publishing datasets or derived extracts.
 
-Contributions are welcome, especially reproducible test cases, corrections to release-time metadata and clearer data provenance. See [Contributing](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/CONTRIBUTING.md), [Security](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/SECURITY.md) and the [changelog](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.0/CHANGELOG.md).
+Contributions are welcome, especially reproducible test cases, corrections to release-time metadata and clearer data provenance. See [Contributing](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/CONTRIBUTING.md), [Security](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/SECURITY.md) and the [changelog](https://github.com/skynet518/Gold-Macro-Intelligence/blob/v1.0.1/CHANGELOG.md).
 
 If a piece of the analysis cannot be checked against its source or a realistic decision timeline, GMI should say so. That is more useful than producing a confident but untestable trade call.
