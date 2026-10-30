@@ -1,0 +1,63 @@
+{
+  "threshold": 0.1,
+  "episodes": [
+    {
+      "peak_at": "2024-01-01T00:00:00+00:00",
+      "trough_at": "2024-01-03T00:00:00+00:00",
+      "end_at": "2024-01-05T00:00:00+00:00",
+      "drawdown": -0.19999999999999996,
+      "fall_days": 2.0,
+      "recovery_days_from_trough": 2.0,
+      "duration_days_from_peak": 4.0,
+      "recovered": true,
+      "right_censored": false
+    },
+    {
+      "peak_at": "2024-01-05T00:00:00+00:00",
+      "trough_at": "2024-01-06T00:00:00+00:00",
+      "end_at": "2024-01-07T00:00:00+00:00",
+      "drawdown": -0.15000000000000002,
+      "fall_days": 1.0,
+      "recovery_days_from_trough": null,
+      "duration_days_from_peak": 2.0,
+      "recovered": false,
+      "right_censored": true
+    }
+  ],
+  "survival": [
+    {
+      "days": 2.0,
+      "at_risk": 2,
+      "recoveries": 0,
+      "censored": 1,
+      "unrecovered_probability": 1.0
+    },
+    {
+      "days": 4.0,
+      "at_risk": 1,
+      "recoveries": 1,
+      "censored": 0,
+      "unrecovered_probability": 0.0
+    }
+  ],
+  "conditional_from_first_crossing": [
+    {
+      "peak_at": "2024-01-01T00:00:00+00:00",
+      "trigger_at": "2024-01-02T00:00:00+00:00",
+      "end_at": "2024-01-05T00:00:00+00:00",
+      "elapsed_days_from_trigger": 3.0,
+      "recovered": true,
+      "right_censored": false
+    },
+    {
+      "peak_at": "2024-01-05T00:00:00+00:00",
+      "trigger_at": "2024-01-06T00:00:00+00:00",
+      "end_at": "2024-01-07T00:00:00+00:00",
+      "elapsed_days_from_trigger": 1.0,
+      "recovered": false,
+      "right_censored": true
+    }
+  ],
+  "units": "calendar days",
+  "note": "Retrospective threshold selection; survival starts at peak, including time before threshold crossing. Research use only."
+}

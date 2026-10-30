@@ -1,0 +1,47 @@
+{
+  "test_start": "2024-01-01T00:00:00Z",
+  "execution": "previous-bar signal enters at next close; earns returns after that close",
+  "initial_equity": 1,
+  "final_equity": 1.10889,
+  "total_return": 0.10888999999999993,
+  "observations": 6,
+  "records": [
+    {
+      "at": "2024-01-02T00:00:00Z",
+      "position_after_close": 1,
+      "turnover": 1,
+      "equity": 0.999
+    },
+    {
+      "at": "2024-01-03T00:00:00Z",
+      "position_after_close": 1,
+      "turnover": 0,
+      "equity": 0.8879999999999999
+    },
+    {
+      "at": "2024-01-04T00:00:00Z",
+      "position_after_close": 1,
+      "turnover": 0,
+      "equity": 1.0545
+    },
+    {
+      "at": "2024-01-05T00:00:00Z",
+      "position_after_close": 0,
+      "turnover": 1,
+      "equity": 1.10889
+    },
+    {
+      "at": "2024-01-06T00:00:00Z",
+      "position_after_close": 0,
+      "turnover": 0,
+      "equity": 1.10889
+    },
+    {
+      "at": "2024-01-07T00:00:00Z",
+      "position_after_close": 0,
+      "turnover": 0,
+      "equity": 1.10889
+    }
+  ],
+  "limitations": "predeclared signals, long/flat, no financing, tax, slippage beyond configured cost; no training or optimization"
+}

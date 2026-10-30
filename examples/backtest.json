@@ -1,0 +1,55 @@
+{
+  "prices": [
+    {
+      "at": "2024-01-01T00:00:00Z",
+      "price": 100
+    },
+    {
+      "at": "2024-01-02T00:00:00Z",
+      "price": 90
+    },
+    {
+      "at": "2024-01-03T00:00:00Z",
+      "price": 80
+    },
+    {
+      "at": "2024-01-04T00:00:00Z",
+      "price": 95
+    },
+    {
+      "at": "2024-01-05T00:00:00Z",
+      "price": 100
+    },
+    {
+      "at": "2024-01-06T00:00:00Z",
+      "price": 85
+    },
+    {
+      "at": "2024-01-07T00:00:00Z",
+      "price": 90
+    }
+  ],
+  "test_start": "2024-01-01T00:00:00Z",
+  "one_way_cost_bps": 10,
+  "signals": [
+    {
+      "at": "2024-01-01T00:00:00Z",
+      "available_at": "2024-01-01T00:00:00Z",
+      "position": 1
+    },
+    {
+      "at": "2024-01-04T00:00:00Z",
+      "available_at": "2024-01-04T00:00:00Z",
+      "position": 0
+    }
+  ],
+  "price_contract": {
+    "instrument": "XAUUSD",
+    "market": "SPOT",
+    "price_type": "spot_close",
+    "currency": "USD",
+    "unit": "troy_oz",
+    "provider": "SYNTHETIC",
+    "observation_frequency": "daily"
+  }
+}

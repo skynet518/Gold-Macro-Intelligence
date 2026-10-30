@@ -1,0 +1,507 @@
+{
+  "synthetic": true,
+  "note": "Fictional values only, not market data or validated signals",
+  "config": {
+    "train_size": 6,
+    "validation_size": 4,
+    "test_size": 3,
+    "transaction_cost_bps": 3,
+    "slippage_bps": 2,
+    "cash_annual_rate": 0.01,
+    "funding_annual_rate": 0.0,
+    "custom_feature_contracts": [
+      {
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "source_url": "https://example.org/data",
+        "description": "Fictional dimensionless indicator for offline tests only",
+        "min_value": -1000,
+        "max_value": 1000
+      }
+    ]
+  },
+  "rows": [
+    {
+      "decision_at": "2020-01-01T00:00:00+00:00",
+      "feature": {
+        "value": 0.0,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-01T00:00:00+00:00",
+        "published_at": "2020-01-01T00:00:00+00:00",
+        "vintage_available_at": "2020-01-01T00:00:00+00:00",
+        "retrieved_at": "2020-01-01T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-02T00:00:00+00:00",
+        "exit_at": "2020-01-03T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 99,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-04T00:00:00+00:00",
+      "feature": {
+        "value": 0.1,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-04T00:00:00+00:00",
+        "published_at": "2020-01-04T00:00:00+00:00",
+        "vintage_available_at": "2020-01-04T00:00:00+00:00",
+        "retrieved_at": "2020-01-04T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-05T00:00:00+00:00",
+        "exit_at": "2020-01-06T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 100,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-07T00:00:00+00:00",
+      "feature": {
+        "value": 0.2,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-07T00:00:00+00:00",
+        "published_at": "2020-01-07T00:00:00+00:00",
+        "vintage_available_at": "2020-01-07T00:00:00+00:00",
+        "retrieved_at": "2020-01-07T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-08T00:00:00+00:00",
+        "exit_at": "2020-01-09T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 101,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-10T00:00:00+00:00",
+      "feature": {
+        "value": 0.3,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-10T00:00:00+00:00",
+        "published_at": "2020-01-10T00:00:00+00:00",
+        "vintage_available_at": "2020-01-10T00:00:00+00:00",
+        "retrieved_at": "2020-01-10T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-11T00:00:00+00:00",
+        "exit_at": "2020-01-12T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 99,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-13T00:00:00+00:00",
+      "feature": {
+        "value": 0.4,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-13T00:00:00+00:00",
+        "published_at": "2020-01-13T00:00:00+00:00",
+        "vintage_available_at": "2020-01-13T00:00:00+00:00",
+        "retrieved_at": "2020-01-13T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-14T00:00:00+00:00",
+        "exit_at": "2020-01-15T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 100,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-16T00:00:00+00:00",
+      "feature": {
+        "value": 0.5,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-16T00:00:00+00:00",
+        "published_at": "2020-01-16T00:00:00+00:00",
+        "vintage_available_at": "2020-01-16T00:00:00+00:00",
+        "retrieved_at": "2020-01-16T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-17T00:00:00+00:00",
+        "exit_at": "2020-01-18T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 101,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-19T00:00:00+00:00",
+      "feature": {
+        "value": 0.6,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-19T00:00:00+00:00",
+        "published_at": "2020-01-19T00:00:00+00:00",
+        "vintage_available_at": "2020-01-19T00:00:00+00:00",
+        "retrieved_at": "2020-01-19T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-20T00:00:00+00:00",
+        "exit_at": "2020-01-21T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 99,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-22T00:00:00+00:00",
+      "feature": {
+        "value": 0.0,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-22T00:00:00+00:00",
+        "published_at": "2020-01-22T00:00:00+00:00",
+        "vintage_available_at": "2020-01-22T00:00:00+00:00",
+        "retrieved_at": "2020-01-22T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-23T00:00:00+00:00",
+        "exit_at": "2020-01-24T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 100,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-25T00:00:00+00:00",
+      "feature": {
+        "value": 0.1,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-25T00:00:00+00:00",
+        "published_at": "2020-01-25T00:00:00+00:00",
+        "vintage_available_at": "2020-01-25T00:00:00+00:00",
+        "retrieved_at": "2020-01-25T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-26T00:00:00+00:00",
+        "exit_at": "2020-01-27T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 101,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-28T00:00:00+00:00",
+      "feature": {
+        "value": 0.2,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-28T00:00:00+00:00",
+        "published_at": "2020-01-28T00:00:00+00:00",
+        "vintage_available_at": "2020-01-28T00:00:00+00:00",
+        "retrieved_at": "2020-01-28T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-01-29T00:00:00+00:00",
+        "exit_at": "2020-01-30T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 99,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-01-31T00:00:00+00:00",
+      "feature": {
+        "value": 0.3,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-01-31T00:00:00+00:00",
+        "published_at": "2020-01-31T00:00:00+00:00",
+        "vintage_available_at": "2020-01-31T00:00:00+00:00",
+        "retrieved_at": "2020-01-31T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-02-01T00:00:00+00:00",
+        "exit_at": "2020-02-02T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 100,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-02-03T00:00:00+00:00",
+      "feature": {
+        "value": 0.4,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-02-03T00:00:00+00:00",
+        "published_at": "2020-02-03T00:00:00+00:00",
+        "vintage_available_at": "2020-02-03T00:00:00+00:00",
+        "retrieved_at": "2020-02-03T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-02-04T00:00:00+00:00",
+        "exit_at": "2020-02-05T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 101,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-02-06T00:00:00+00:00",
+      "feature": {
+        "value": 0.5,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-02-06T00:00:00+00:00",
+        "published_at": "2020-02-06T00:00:00+00:00",
+        "vintage_available_at": "2020-02-06T00:00:00+00:00",
+        "retrieved_at": "2020-02-06T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-02-07T00:00:00+00:00",
+        "exit_at": "2020-02-08T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 99,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-02-09T00:00:00+00:00",
+      "feature": {
+        "value": 0.6,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-02-09T00:00:00+00:00",
+        "published_at": "2020-02-09T00:00:00+00:00",
+        "vintage_available_at": "2020-02-09T00:00:00+00:00",
+        "retrieved_at": "2020-02-09T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-02-10T00:00:00+00:00",
+        "exit_at": "2020-02-11T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 100,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-02-12T00:00:00+00:00",
+      "feature": {
+        "value": 0.0,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-02-12T00:00:00+00:00",
+        "published_at": "2020-02-12T00:00:00+00:00",
+        "vintage_available_at": "2020-02-12T00:00:00+00:00",
+        "retrieved_at": "2020-02-12T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-02-13T00:00:00+00:00",
+        "exit_at": "2020-02-14T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 101,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    },
+    {
+      "decision_at": "2020-02-15T00:00:00+00:00",
+      "feature": {
+        "value": 0.1,
+        "feature_type": "raw_observation",
+        "observed_at": "2020-02-15T00:00:00+00:00",
+        "published_at": "2020-02-15T00:00:00+00:00",
+        "vintage_available_at": "2020-02-15T00:00:00+00:00",
+        "retrieved_at": "2020-02-15T00:00:00+00:00",
+        "source_url": "https://example.org/data",
+        "vintage_evidence": "https://example.org/vintage",
+        "vintage_id": "synthetic-v1",
+        "evidence_status": "USER_ATTESTED",
+        "metric": "synthetic_indicator",
+        "unit": "index",
+        "series_id": "synthetic_series",
+        "source_id": "synthetic_provider",
+        "transformation": "identity"
+      },
+      "execution": {
+        "entry_at": "2020-02-16T00:00:00+00:00",
+        "exit_at": "2020-02-17T00:00:00+00:00",
+        "entry_price": 100,
+        "exit_price": 99,
+        "price_type": "daily_close",
+        "instrument": "SYNTHETIC",
+        "currency": "USD",
+        "source_url": "https://example.org/prices"
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "market_hypothesis": "observe",
+  "risk": {
+    "portfolio_weight": 0.2,
+    "max_position_weight": 0.25,
+    "portfolio_drawdown": 0.03,
+    "max_portfolio_drawdown": 0.1,
+    "risk_budget": 0.05,
+    "asset_stress_loss": 0.2
+  }
+}

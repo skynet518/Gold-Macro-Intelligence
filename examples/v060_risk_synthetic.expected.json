@@ -1,0 +1,13 @@
+{
+  "market_signal": {
+    "type": "MANUAL_HYPOTHESIS",
+    "value": "observe",
+    "model_signal": "NO_VALIDATED_SIGNAL"
+  },
+  "risk_action": "WITHIN_LIMIT",
+  "risk_breaches": [],
+  "max_allowed_weight": 0.25,
+  "final_action": "RESEARCH_ONLY",
+  "model_status": "NO_VALIDATED_SIGNAL",
+  "warning": "risk thresholds are user assumptions; no order is sent"
+}

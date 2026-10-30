@@ -1,0 +1,175 @@
+{
+  "status": "RESEARCH_ONLY",
+  "model_signal": "NO_VALIDATED_SIGNAL",
+  "reason": "mechanical checks do not establish independent evidence or sufficient statistical validation",
+  "price_contract": [
+    "SYNTHETIC",
+    "daily_close",
+    "USD"
+  ],
+  "walk_forward_windows": [
+    {
+      "train_indices": [
+        0,
+        6
+      ],
+      "validation_indices": [
+        6,
+        10
+      ],
+      "test_indices": [
+        10,
+        13
+      ],
+      "training_median": 0.25,
+      "candidate_thresholds": [
+        0.15,
+        0.25,
+        0.35
+      ],
+      "validation_results": [
+        {
+          "sample_count": 4,
+          "total_return": -0.021805132823886852,
+          "max_drawdown": -0.021805132823886852,
+          "turnover": 4.0,
+          "cost_paid_initial_equity_units": 0.0019786268249327218,
+          "cash_annual_rate": 0.01,
+          "funding_annual_rate": 0.0,
+          "transaction_cost_bps": 3,
+          "slippage_bps": 2
+        },
+        {
+          "sample_count": 4,
+          "total_return": -0.010908461759403743,
+          "max_drawdown": -0.01096265632883553,
+          "turnover": 2.0,
+          "cost_paid_initial_equity_units": 0.0009947525,
+          "cash_annual_rate": 0.01,
+          "funding_annual_rate": 0.0,
+          "transaction_cost_bps": 3,
+          "slippage_bps": 2
+        },
+        {
+          "sample_count": 4,
+          "total_return": -0.010908461759403743,
+          "max_drawdown": -0.01096265632883553,
+          "turnover": 2.0,
+          "cost_paid_initial_equity_units": 0.0009947525,
+          "cash_annual_rate": 0.01,
+          "funding_annual_rate": 0.0,
+          "transaction_cost_bps": 3,
+          "slippage_bps": 2
+        }
+      ],
+      "selected_threshold": 0.25,
+      "out_of_sample": {
+        "sample_count": 3,
+        "total_return": -0.0010996500250000096,
+        "max_drawdown": -0.010495000000000032,
+        "turnover": 2.0,
+        "cost_paid_initial_equity_units": 0.000999700025,
+        "cash_annual_rate": 0.01,
+        "funding_annual_rate": 0.0,
+        "transaction_cost_bps": 3,
+        "slippage_bps": 2
+      },
+      "benchmark": {
+        "sample_count": 3,
+        "total_return": -0.0010996500250000096,
+        "max_drawdown": -0.010495000000000032,
+        "turnover": 2.0,
+        "cost_paid_initial_equity_units": 0.000999700025,
+        "cash_annual_rate": 0.01,
+        "funding_annual_rate": 0.0,
+        "transaction_cost_bps": 3,
+        "slippage_bps": 2
+      }
+    },
+    {
+      "train_indices": [
+        3,
+        9
+      ],
+      "validation_indices": [
+        9,
+        13
+      ],
+      "test_indices": [
+        13,
+        16
+      ],
+      "training_median": 0.35,
+      "candidate_thresholds": [
+        0.24999999999999997,
+        0.35,
+        0.44999999999999996
+      ],
+      "validation_results": [
+        {
+          "sample_count": 4,
+          "total_return": -0.0010722828921237992,
+          "max_drawdown": -0.010495000000000032,
+          "turnover": 2.0,
+          "cost_paid_initial_equity_units": 0.000999727414041781,
+          "cash_annual_rate": 0.01,
+          "funding_annual_rate": 0.0,
+          "transaction_cost_bps": 3,
+          "slippage_bps": 2
+        },
+        {
+          "sample_count": 4,
+          "total_return": -0.0010449150094632431,
+          "max_drawdown": -0.010494999999999921,
+          "turnover": 2.0,
+          "cost_paid_initial_equity_units": 0.0009997548038339463,
+          "cash_annual_rate": 0.01,
+          "funding_annual_rate": 0.0,
+          "transaction_cost_bps": 3,
+          "slippage_bps": 2
+        },
+        {
+          "sample_count": 4,
+          "total_return": -0.010908461759403854,
+          "max_drawdown": -0.010989752499999894,
+          "turnover": 2.0,
+          "cost_paid_initial_equity_units": 0.0009948342627194857,
+          "cash_annual_rate": 0.01,
+          "funding_annual_rate": 0.0,
+          "transaction_cost_bps": 3,
+          "slippage_bps": 2
+        }
+      ],
+      "selected_threshold": 0.35,
+      "out_of_sample": {
+        "sample_count": 3,
+        "total_return": -0.0009450095104143186,
+        "max_drawdown": -0.0009723801301367851,
+        "turnover": 2.0,
+        "cost_paid_initial_equity_units": 0.0009997500000000002,
+        "cash_annual_rate": 0.01,
+        "funding_annual_rate": 0.0,
+        "transaction_cost_bps": 3,
+        "slippage_bps": 2
+      },
+      "benchmark": {
+        "sample_count": 3,
+        "total_return": -0.0010996500250000096,
+        "max_drawdown": -0.010495000000000032,
+        "turnover": 2.0,
+        "cost_paid_initial_equity_units": 0.000999700025,
+        "cash_annual_rate": 0.01,
+        "funding_annual_rate": 0.0,
+        "transaction_cost_bps": 3,
+        "slippage_bps": 2
+      }
+    }
+  ],
+  "limitations": [
+    "Input evidence is operator-attested; URLs are not independently verified.",
+    "No model signal promotion or broker execution.",
+    "Non-overlapping interval returns; gaps between intervals carry no interest. Drawdown is observed at interval exits, not intraday.",
+    "Cash and funding are simple annual rates, not a complete futures financing model.",
+    "Transaction costs and slippage are explicit research assumptions."
+  ]
+}
